@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agnihotram Radha Hema Sahithi — Portfolio</title>
+  <meta name="description" content="Portfolio of Agnihotram Radha Hema Sahithi — B.Sc. (Hons) AI student. Skills: Python, MS Office. Certifications: AI for Beginners, Data Science & Analytics, Generative AI." />
+  <meta property="og:title" content="Agnihotram Radha Hema Sahithi — Portfolio" />
+  <meta property="og:description" content="AI student showcasing education, skills, certifications, and achievements." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%230ea5e9'/><text x='50' y='58' font-size='56' text-anchor='middle' fill='white' font-family='Arial'>R</text></svg>">
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #111833;
+      --text: #eef2ff;
+      --muted: #c7d2fe;
+      --brand: #0ea5e9; /* sky-500 */
+      --brand-2: #22d3ee; /* cyan-400 */
+      --accent: #a78bfa; /* violet-400 */
+      --ok: #34d399;
+      --warn: #f59e0b;
+      --shadow: 0 10px 30px rgba(2,8,23,.45);
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f8fafc;
+        --panel: #ffffff;
+        --text: #0f172a;
+        --muted: #334155;
+      }
+      body { background-image: radial-gradient(60vw 60vw at 120% -10%, rgba(14,165,233,.10), transparent), radial-gradient(60vw 60vw at -20% 120%, rgba(167,139,250,.10), transparent); }
+    }
+    * { box-sizing: border-box }
+    html { scroll-behavior: smooth }
+    body {
+      margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Cantarell, Noto Sans, Ubuntu, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text); background: var(--bg);
+      line-height: 1.6;
+      background-image: radial-gradient(60vw 60vw at 120% -10%, rgba(14,165,233,.22), transparent), radial-gradient(60vw 60vw at -20% 120%, rgba(167,139,250,.18), transparent);
+    }
+    a { color: var(--brand) }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 1.25rem }
+
+    /* Header/Nav */
+    .skip { position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden; }
+    .skip:focus { left: 1rem; top: 1rem; width:auto; height:auto; padding:.5rem .75rem; background: var(--brand); color:white; border-radius:.5rem; box-shadow: var(--shadow); }
+    header {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: saturate(1.2) blur(8px);
+      background: color-mix(in hsl, var(--bg) 88%, transparent);
+      border-bottom: 1px solid color-mix(in hsl, var(--text) 10%, transparent);
+    }
+    nav { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding: .75rem 0 }
+    .brand { display:flex; align-items:center; gap:.75rem; font-weight:700; letter-spacing:.3px }
+    .brand .logo { width:40px; height:40px; border-radius:14px; display:grid; place-items:center; background: linear-gradient(135deg, var(--brand), var(--accent)); color:white; box-shadow: var(--shadow); font-weight:800 }
+    .navlinks { display:flex; gap:1rem; flex-wrap:wrap }
+    .navlinks a { text-decoration:none; padding:.5rem .75rem; border-radius:.75rem; color:var(--text) }
+    .navlinks a:hover, .navlinks a:focus { outline:none; background: color-mix(in hsl, var(--brand) 18%, transparent) }
+
+    /* Hero */
+    .hero { position: relative; padding: 6rem 0 4rem; }
+    .grid { display:grid; gap:2rem }
+    @media (min-width: 900px) { .grid { grid-template-columns: 3fr 2fr } }
+    .card {
+      background: linear-gradient(180deg, color-mix(in hsl, var(--panel) 86%, transparent), color-mix(in hsl, var(--panel) 96%, transparent));
+      border: 1px solid color-mix(in hsl, var(--text) 10%, transparent);
+      border-radius: 1.25rem; padding: 1.5rem; box-shadow: var(--shadow);
+    }
+    h1 { font-size: clamp(2rem, 4vw + 1rem, 3.25rem); line-height: 1.1; margin: 0 0 .5rem }
+    .lead { font-size: clamp(1rem, 1vw + .9rem, 1.25rem); color: var(--muted); margin: 0 0 1.25rem }
+    .cta { display:flex; gap:.75rem; flex-wrap:wrap; margin-top: 1rem }
+    .btn {
+      display:inline-flex; align-items:center; gap:.5rem; text-decoration:none; font-weight:700; letter-spacing:.2px;
+      padding:.75rem 1rem; border-radius: .9rem; border: 1px solid color-mix(in hsl, var(--brand) 40%, transparent);
+      background: linear-gradient(135deg, color-mix(in hsl, var(--brand) 22%, transparent), color-mix(in hsl, var(--accent) 18%, transparent)); color: white;
+      box-shadow: var(--shadow);
+    }
+    .btn.secondary { background: transparent; color: var(--text); border-color: color-mix(in hsl, var(--text) 24%, transparent) }
+    .kpis { display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:1rem; margin-top:1.25rem }
+    .kpi { text-align:center; padding:1rem; border-radius: 1rem; background: color-mix(in hsl, var(--panel) 80%, transparent); border:1px dashed color-mix(in hsl, var(--brand) 30%, transparent) }
+    .kpi strong { display:block; font-size:1.5rem }
+
+    /* Sections */
+    section { padding: 3rem 0 }
+    section h2 { font-size: clamp(1.5rem, 1.1rem + 1.5vw, 2rem); margin: 0 0 1rem }
+    .pill { display:inline-block; padding:.4rem .7rem; border-radius: 999px; background: color-mix(in hsl, var(--brand) 18%, transparent); border:1px solid color-mix(in hsl, var(--brand) 35%, transparent); font-weight:600; margin:.25rem .35rem .35rem 0 }
+    .two-col { display:grid; gap:1rem }
+    @media (min-width: 850px){ .two-col { grid-template-columns: 1fr 1fr } }
+    ul.clean { list-style: none; padding: 0; margin: 0 }
+    ul.clean li { padding: .6rem .75rem; background: color-mix(in hsl, var(--panel) 85%, transparent); border:1px solid color-mix(in hsl, var(--text) 10%, transparent); border-radius:.75rem; margin-bottom:.5rem }
+    .timeline { position:relative; padding-left: 1rem }
+    .timeline:before { content:""; position:absolute; left:.4rem; top:.3rem; bottom:.3rem; width:2px; background: color-mix(in hsl, var(--brand) 35%, transparent) }
+    .tl-item { position:relative; margin: .75rem 0 .75rem 0; padding-left: 1.25rem }
+    .tl-item:before { content:""; position:absolute; left:-.1rem; top:.6rem; width:.6rem; height:.6rem; border-radius:50%; background: var(--brand); box-shadow:0 0 0 4px color-mix(in hsl, var(--brand) 20%, transparent) }
+    footer { padding: 2.5rem 0 3.5rem; color: var(--muted); text-align:center; border-top: 1px solid color-mix(in hsl, var(--text) 10%, transparent) }
+    .contact-card { display:grid; gap:1rem; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); }
+    .contact-card a { text-decoration:none; padding:1rem; border-radius:1rem; border: 1px solid color-mix(in hsl, var(--text) 12%, transparent); background: color-mix(in hsl, var(--panel) 84%, transparent) }
+    .small { font-size:.95rem; color: var(--muted) }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Agnihotram Radha Hema Sahithi",
+    "email": "mailto:agnihotramradha@gmail.com",
+    "jobTitle": "AI Student",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Sri Durga Malleswara Siddhartha Mahila Kalasala",
+      "address": {"@type": "PostalAddress", "addressLocality": "Vijayawada", "addressCountry": "IN"}
+    },
+    "knowsLanguage": ["English", "Telugu"],
+    "sameAs": []
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <div class="container">
+      <nav aria-label="Primary">
+        <div class="brand">
+          <span class="logo" aria-hidden="true">R</span>
+          <span>Radha Hema Sahithi</span>
+        </div>
+        <div class="navlinks" role="menubar">
+          <a role="menuitem" href="#about">About</a>
+          <a role="menuitem" href="#education">Education</a>
+          <a role="menuitem" href="#skills">Skills</a>
+          <a role="menuitem" href="#achievements">Achievements</a>
+          <a role="menuitem" href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="grid">
+        <div class="card">
+          <h1>AI Student with a Growth Mindset</h1>
+          <p class="lead">B.Sc. (Hons) — Artificial Intelligence at Sri Durga Malleswara Siddhartha Mahila Kalasala, Vijayawada. Passionate about learning, problem‑solving and bringing ideas to life.</p>
+          <div class="cta">
+            <a class="btn" href="#contact" aria-label="Jump to contact options">Get in touch</a>
+            <a class="btn secondary" href="#skills">View my skills</a>
+          </div>
+          <div class="kpis" aria-label="Highlights">
+            <div class="kpi" aria-label="Current CGPA/Percentage"><strong>84%</strong><span class="small">B.Sc. (till III Sem)</span></div>
+            <div class="kpi"><strong>93%</strong><span class="small">Intermediate (2023)</span></div>
+            <div class="kpi"><strong>NSS</strong><span class="small">Active Volunteer</span></div>
+          </div>
+        </div>
+        <div class="card" aria-label="Quick facts">
+          <h2 style="margin-top:0">Quick facts</h2>
+          <ul class="clean">
+            <li>Vijayawada, India</li>
+            <li>Good at communication & highly productive</li>
+            <li>Open to internships and student projects</li>
+          </ul>
+          <div style="margin-top:1rem">
+            <a class="btn" href="Resume.pdf" download>Download Resume</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <h2>About</h2>
+      <div class="two-col">
+        <div class="card">
+          <p>I’m Agnihotram Radha Hema Sahithi, an aspiring Artificial Intelligence professional. I love blending theory and practice — from understanding fundamentals to trying hands‑on mini projects. My goal is to keep improving, contribute to real‑world solutions, and build a fulfilling career.</p>
+          <p class="small">“Learning never exhausts the mind.”</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Looking for</h3>
+          <ul class="clean">
+            <li>Internships and volunteer research opportunities in AI/ML</li>
+            <li>Peer groups to build Python mini‑projects</li>
+            <li>Workshops, hackathons, and student communities</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+      <h2>Education</h2>
+      <div class="card timeline">
+        <article class="tl-item">
+          <h3 style="margin:.2rem 0">B.Sc. (Hons) — Artificial Intelligence</h3>
+          <div class="small">Sri Durga Malleswara Siddhartha Mahila Kalasala, Vijayawada — <strong>Pursuing</strong> (84% up to III Sem)</div>
+        </article>
+        <article class="tl-item">
+          <h3 style="margin:.2rem 0">Board of Intermediate Education</h3>
+          <div class="small">Narayana Junior College, Vijayawada — <strong>2023</strong> (93%)</div>
+        </article>
+        <article class="tl-item">
+          <h3 style="margin:.2rem 0">Secondary Education</h3>
+          <div class="small">Nirmala High School, Vijayawada — <strong>2021</strong> (81%)</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Skills & Certifications</h2>
+      <div class="two-col">
+        <div class="card">
+          <h3 style="margin-top:0">Technical</h3>
+          <span class="pill">Python (Basics)</span>
+          <span class="pill">MS Office</span>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Soft Skills</h3>
+          <span class="pill">Communication</span>
+          <span class="pill">Productive & Organized</span>
+        </div>
+      </div>
+      <div class="card" style="margin-top:1rem">
+        <h3 style="margin-top:0">Certifications</h3>
+        <ul class="clean">
+          <li>AI for Beginners</li>
+          <li>Data Science & Analytics</li>
+          <li>Introduction to Generative AI</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Achievements & Activities -->
+    <section id="achievements">
+      <h2>Achievements & Activities</h2>
+      <div class="two-col">
+        <div class="card">
+          <h3 style="margin-top:0">Achievements</h3>
+          <ul class="clean">
+            <li>1st place — Workshop on Prompt Engineering (RYSE)</li>
+            <li>Appreciation Certificate — Durga Camp at Indra Kiladri (Dussehra)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Extra‑curricular</h3>
+          <ul class="clean">
+            <li>Active member of NSS as a volunteer</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact-card">
+        <a href="mailto:agnihotramradha@gmail.com" aria-label="Send email to Radha">
+          📧 Email<br><strong>agnihotramradha@gmail.com</strong>
+        </a>
+        <a href="tel:+919866933511" aria-label="Call Radha">
+          📱 Phone<br><strong>+91 98669 33511</strong>
+        </a>
+        <a href="#" aria-label="LinkedIn profile (add your URL)" onclick="alert('Replace this # with your LinkedIn URL!')">
+          🔗 LinkedIn<br><strong>Add your profile</strong>
+        </a>
+      </div>
+      <p class="small" style="margin-top:1rem">Tip: Replace the LinkedIn link and ensure <code>Resume.pdf</code> is placed next to this HTML file to enable the download button above.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Agnihotram Radha Hema Sahithi · Built with plain HTML & CSS
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
+
